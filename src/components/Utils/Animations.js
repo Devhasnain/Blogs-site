@@ -1,0 +1,13 @@
+export const navbar = { hidden: { y: '-100vh' }, visible: { y: '0vh', transition: { duration: 0.6 } } };
+export const Bodydiv = { hidden: { opacity: '0%' }, visible: { opacity: '100%', transition: { duration: 1.5 } }, exit: { opacity: '0%' } };
+export const aboutpara1 = { hidden: { opacity: '0%', }, visible: { opacity: '100%', transition: { duration: 0.5 } } };
+export const aboutpara2 = { hidden: { opacity: '0%' }, visible: { opacity: '100%', transition: { duration: 0.5 } } };
+export const iconsDiv = { hidden: { scale: 0 }, visible: { scale: 1, transition: { type: 'spring', duration: 0.5 } } };
+export const cards = { hidden: { scale: 0, opacity: '0%' }, visible: { opacity: '100%', scale: 1, transition: { type: 'spring', duration: 0.5 } } };
+export const posts = { hidden: { scale: 0, opacity: '0%' }, visible: { scale: 1, opacity: '100%', transition: { duration: 0.3 } } };
+export const aboutDiv = { hidden: { opacity: '0%' }, visible: { opacity: '100%', transition: { duration: 1 } }, exit: { opacity: '0%' } };
+export const contactDiv = { hidden: { opacity: '0%' }, visible: { opacity: '100%' }, exit: { opacity: '0%' } };
+export const Menuanimate = { hidden: { opacity: '0%' }, visible: { opacity: '55%', transition: { duration: 0.3 } }, exit: { opacity: '0%' } };
+export const MenuContent = { hidden: { x: '100vw' }, visible: { x: '0vw', transition: { duration: 0.5 } }, exit: { x: '100vw' } };
+export const LoginDiv = { hidden: { x: '-100vw' }, visible: { x: '0vw', transition: { duration: 0.5} }, exit: { x: '100vw' } };
+export const DashbordDiv = { hidden: { x: '-100vw' }, visible: { x: '0vw', transition: { duration: 0.5 } }, exit: { x: '100vw' } }

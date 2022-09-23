@@ -1,0 +1,11 @@
+.li-items{
+    z-index: 10;
+    background-color:#00000c;
+}
+.nav-item{
+    font-size: 19px;
+}
+.menu-btn{
+    background-color: transparent;
+    border: none;
+}

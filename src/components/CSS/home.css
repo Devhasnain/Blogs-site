@@ -1,0 +1,74 @@
+.bg-video{
+    position: absolute;
+    top:46px;
+    left: 0px;
+    width: 100%;
+    height: 86vh;
+    z-index: 0;
+    object-fit: cover;
+}
+.small-screen-bg{
+    display: none;
+}
+.content-div{
+    position: absolute;
+    left: 0px;
+    width: 100%;
+}
+.card-img-1{
+    background-image: url('../Media/card-img-1.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+.card-img-2{
+    background-image: url('../Media/card-img-2.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+.card-img-3{
+    background-image: url('../Media/card-img-3.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+@media only screen and (max-width: 1000px) {
+    .bg-video{
+        position: absolute;
+        top:35px;
+        left: 0px;
+        width: 100%;
+        height: 86vh;
+        z-index: 0;
+        object-fit: cover;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .bg-video{
+        position: absolute;
+        top:42px;
+        left: 0px;
+        width: 100%;
+        height: 86vh;
+        z-index: 0;
+        object-fit: cover;
+    }
+    .large-screen-video{
+        display: none;
+    }
+    .small-screen-bg{
+        display: block;
+        position: absolute;
+        top:42px;
+        left: 0px;
+        width: 100%;
+        height: 86vh;
+        object-fit: cover;
+        opacity: 100%;
+        filter: blur(2px);
+    }
+    .large-screen-row{
+        display: none;
+    }
+}
