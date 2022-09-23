@@ -54,12 +54,7 @@ function Navbar() {
                             </ul>
                         </div>
                         <div className='col-sm col-md col-lg col text-end sm-navbar'>
-                            <motion.button className='menu-btn'
-                            whileTap={{scale:0.8}}
-                            onClick={()=>{dispatch(Displaymenu())}}
-                            >
-                                <i className="bi bi-list text-light menu-icon"></i>
-                            </motion.button>
+                                <i  onClick={()=>{dispatch(Displaymenu())}} className="bi bi-list text-light fs-1"></i>
                         </div>
                     </div>
                 </div>
