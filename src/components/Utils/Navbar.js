@@ -54,7 +54,10 @@ function Navbar() {
                             </ul>
                         </div>
                         <div className='col-sm col-md col-lg col text-end sm-navbar'>
-                                <i  onClick={()=>{dispatch(Displaymenu())}} className="bi bi-list text-light fs-1"></i>
+                                {/* <i  onClick={()=>{dispatch(Displaymenu())}} className="bi bi-list text-light fs-1"></i> */}
+                                <button onClick={()=>{dispatch(Displaymenu())}} className='btn btn-sm btn-light'>
+                                    Menu
+                                </button>
                         </div>
                     </div>
                 </div>
