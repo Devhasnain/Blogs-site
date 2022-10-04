@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useEffect, useState } from 'react';
+import React, {useContext, useEffect, useState } from 'react';
 import { Routes, Route, useLocation, useNavigate } from 'react-router-dom';
 import About from './Pages/About';
 import Home from './Pages/Home';
@@ -16,7 +16,7 @@ import Error from './Utils/Error';
 import { MainStore } from './Store/Context';
 
 function RoutesPage() {
-  const { menuOpen, setMenuOpen, data, setData } = useContext(MainStore);
+  const { menuOpen,setData } = useContext(MainStore);
   const location = useLocation();
   const [loader, setLoader] = useState(true);
   const navigate = useNavigate();

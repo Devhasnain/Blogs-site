@@ -50,11 +50,17 @@ function Navbar() {
                                 >
                                     <NavLink to='/posts' className="nav-link text-light ">Posts</NavLink>
                                 </motion.li>
+                                <motion.li className="nav-item"
+                                    whileHover={{ scale: 1.2, }}
+                                    whileTap={{ scale: 0.9 }}
+                                >
+                                    <NavLink to='/admin' className="nav-link text-light ">This company</NavLink>
+                                </motion.li>
                             </ul>
                         </div>
                         <div className='col-sm col-md col-lg col text-end sm-navbar'>
-                            <button onClick={()=>{setMenuOpen(!menuOpen)}} className='btn btn-sm' style={{boxShadow:"none"}}>
-                                <i className="bi bi-list text-light fs-1"></i>
+                            <button onClick={()=>{setMenuOpen(!menuOpen)}} className='btn btn-xl' style={{boxShadow:"none"}}>
+                                <i className="bi bi-list text-light display-4 fw-bold"></i>
                             </button>
                         </div>
                     </div>

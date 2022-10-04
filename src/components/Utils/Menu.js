@@ -34,6 +34,9 @@ function Menu() {
                         <motion.li
                             whileTap={{ scale: 0.9 }}
                         ><NavLink to='/posts' onClick={()=>{setMenuOpen(!menuOpen)}} >Posts</NavLink></motion.li>
+                        <motion.li
+                            whileTap={{ scale: 0.9 }}
+                        ><NavLink to='/admin' onClick={()=>{setMenuOpen(!menuOpen)}} >This company</NavLink></motion.li>
                     </ul>
                 </motion.div>
             </div>

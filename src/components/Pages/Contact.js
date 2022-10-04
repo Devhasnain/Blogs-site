@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { motion } from 'framer-motion';
-import { contactDiv, posts } from '../Utils/Animations';
+import { contactDiv } from '../Utils/Animations';
 import Footer from '../Utils/Footer';
 import { NavLink } from 'react-router-dom';
 import {ClipLoader} from 'react-spinners';

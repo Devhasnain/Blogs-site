@@ -19,7 +19,7 @@ function Home() {
                     animate='visible'
                     exit='exit'
                 >
-                    <img src={Bgimage} className='bg-video large-screen-video' />
+                    <img src={Bgimage} alt='' className='bg-video large-screen-video' />
                     <img src={Bgimage} alt='' className='small-screen-bg'/>
                 </motion.div>
                 <div className='content-div'>

@@ -57,11 +57,11 @@ function Login() {
             <h2>Login</h2>
             <br />
             <form onSubmit={handleSubmit}>
-              <input type='text' placeholder='Name *' value={state} onChange={(e) => { setState(e.target.value) }} required minLength={3} className='form-control' /><br />
-              <input type='password' id='inputpassword' placeholder='Password *' value={state1} onChange={(e) => { setState1(e.target.value) }} required minLength={8} className='form-control' />
+              <input type='text' placeholder='Name *' autoComplete='true' value={state} onChange={(e) => { setState(e.target.value) }} required minLength={3} className='form-control' /><br />
+              <input type='password' id='inputpassword' autoComplete='true' placeholder='Password *' value={state1} onChange={(e) => { setState1(e.target.value) }} required minLength={8} className='form-control' />
               <br/>
               <label><small>show password</small></label>
-              <input type='checkbox' className='mx-2' onClick={action} />
+              <input type='checkbox' className='mx-2' onClick={action} autoComplete='true' />
               <br />
               <br />
               {loader?<ClipLoader size={25}/>: <motion.button type='submit' className='btn btn-outline-secondary'

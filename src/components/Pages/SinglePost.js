@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import { useParams } from 'react-router-dom';
-import img from '../Media/card-img-1.jpeg';
 import Footer from '../Utils/Footer';
 import {motion} from 'framer-motion';
 import {Bodydiv} from '../Utils/Animations';
