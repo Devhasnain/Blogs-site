@@ -1,13 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
 import Logo from '../Media/logo.png';
 import '../CSS/navbar.css';
 import { motion } from 'framer-motion';
 import { navbar } from './Animations';
-import { useDispatch } from 'react-redux';
-import { Displaymenu } from '../redux/reducers/State';
+import { MainStore } from '../Store/Context';
 function Navbar() {
-    const dispatch=useDispatch();
+    const { menuOpen, setMenuOpen } = useContext(MainStore);
     return (
         <>
             <motion.div className='container-fluid li-items'
@@ -54,10 +53,9 @@ function Navbar() {
                             </ul>
                         </div>
                         <div className='col-sm col-md col-lg col text-end sm-navbar'>
-                                {/* <i  onClick={()=>{dispatch(Displaymenu())}} className="bi bi-list text-light fs-1"></i> */}
-                                <button onClick={()=>{dispatch(Displaymenu())}} className='btn btn-sm btn-light'>
-                                    Menu
-                                </button>
+                            <button onClick={()=>{setMenuOpen(!menuOpen)}} className='btn btn-sm' style={{boxShadow:"none"}}>
+                                <i className="bi bi-list text-light fs-1"></i>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -66,4 +64,4 @@ function Navbar() {
     )
 }
 
-export default Navbar
+export default Navbar;

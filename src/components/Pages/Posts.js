@@ -3,10 +3,10 @@ import { NavLink } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Bodydiv } from '../Utils/Animations';
 import Footer from '../Utils/Footer';
-import { DataProvider } from '../RoutesPage';
+import { MainStore } from '../Store/Context';
 
 function Posts() {
-    const { data } = useContext(DataProvider);
+    const { data } = useContext(MainStore);
     let date = new Date();
     return (
         <>

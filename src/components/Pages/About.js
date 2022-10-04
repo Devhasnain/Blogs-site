@@ -3,10 +3,10 @@ import Img from '../Media/aboutimg.jpg';
 import Footer from '../Utils/Footer';
 import {motion} from 'framer-motion';
 import {aboutDiv} from '../Utils/Animations';
-import {DataProvider} from '../RoutesPage';
 import { NavLink } from 'react-router-dom';
+import { MainStore } from '../Store/Context';
 function About() {
-    const {data}=useContext(DataProvider);
+    const {data}=useContext(MainStore);
     return (
         <motion.div className='container-fluid'
         variants={aboutDiv}
@@ -33,21 +33,21 @@ function About() {
                         <br />
                         <div className='row bg-dark text-light p-4 gy-2'>
                             <motion.div className='col my-1  text-center'
-                            whileHover={{scale:1.2}}
+                            whileHover={{scale:1.1}}
                             whileTap={{scale:1}}
                             >
                                 <h1 className='display-3'>300</h1>
                                 <h2>SATISFIED CLIENTS</h2>
                             </motion.div>
                             <motion.div className='col my-1 text-center'
-                            whileHover={{scale:1.2}}
+                            whileHover={{scale:1.1}}
                             whileTap={{scale:1}}
                             >
                                 <h1 className='display-3'>150</h1>
                                 <h2>AWOARDS</h2>
                             </motion.div>
                             <motion.div className='col my-1  text-center'
-                            whileHover={{scale:1.2}}
+                            whileHover={{scale:1.1}}
                             whileTap={{scale:1}}
                             >
                                 <h1 className='display-3'>500</h1>

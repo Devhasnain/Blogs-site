@@ -1,15 +1,10 @@
-import React, { useEffect } from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
+import React, { useContext} from 'react';
+import { NavLink} from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menuanimate,MenuContent } from '../Utils/Animations';
-import { useDispatch } from 'react-redux';
-import {Displaymenu} from '../redux/reducers/State';
+import { MainStore } from '../Store/Context';
 function Menu() {
-    const dispatch=useDispatch();
-    const location=useLocation();
-    useEffect(()=>{
-   dispatch(Displaymenu())
-    },[location.pathname])
+    const {menuOpen,setMenuOpen}=useContext(MainStore)
     return (
         <AnimatePresence>
             <div className='row menu-div'>
@@ -18,7 +13,7 @@ function Menu() {
                   initial='hidden'
                   animate='visible'
                   exit='exit'
-                  onClick={()=>{dispatch(Displaymenu())}}
+                  onClick={()=>{setMenuOpen(!menuOpen)}}
                 ></motion.div>
                 <motion.div className='content-div-menu border'
                 variants={MenuContent}
@@ -29,16 +24,16 @@ function Menu() {
                     <ul>
                         <motion.li
                             whileTap={{ scale: 0.9 }}
-                        ><NavLink to='/'>Home</NavLink></motion.li>
+                        ><NavLink to='/' onClick={()=>{setMenuOpen(!menuOpen)}} >Home</NavLink></motion.li>
                         <motion.li
                             whileTap={{ scale: 0.9 }}
-                        ><NavLink to='/about'>About</NavLink></motion.li>
+                        ><NavLink to='/about' onClick={()=>{setMenuOpen(!menuOpen)}} >About</NavLink></motion.li>
                         <motion.li
                             whileTap={{ scale: 0.9 }}
-                        ><NavLink to='/contact'>Contact</NavLink></motion.li>
+                        ><NavLink to='/contact' onClick={()=>{setMenuOpen(!menuOpen)}} >Contact</NavLink></motion.li>
                         <motion.li
                             whileTap={{ scale: 0.9 }}
-                        ><NavLink to='/posts'>Posts</NavLink></motion.li>
+                        ><NavLink to='/posts' onClick={()=>{setMenuOpen(!menuOpen)}} >Posts</NavLink></motion.li>
                     </ul>
                 </motion.div>
             </div>

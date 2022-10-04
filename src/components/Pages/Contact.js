@@ -3,11 +3,11 @@ import { motion } from 'framer-motion';
 import { contactDiv, posts } from '../Utils/Animations';
 import Footer from '../Utils/Footer';
 import { NavLink } from 'react-router-dom';
-import {DataProvider} from '../RoutesPage';
 import {ClipLoader} from 'react-spinners';
 import axios from 'axios';
+import { MainStore } from '../Store/Context';
 function Contact() {
-    const {data}=useContext(DataProvider);
+    const {data}=useContext(MainStore);
     const [loader,setLoader]=useState(false);
     const [Name,setName]=useState('');
     const [Email,setEmail]=useState('');

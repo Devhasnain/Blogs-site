@@ -4,10 +4,10 @@ import img from '../Media/card-img-1.jpeg';
 import Footer from '../Utils/Footer';
 import {motion} from 'framer-motion';
 import {Bodydiv} from '../Utils/Animations';
-import { DataProvider } from '../RoutesPage';
+import { MainStore } from '../Store/Context';
 function SinglePost() {
     const { id } = useParams();
-    const {data}=useContext(DataProvider);
+    const {data}=useContext(MainStore);
     let date=new Date();
     return (
         <>

@@ -13,7 +13,6 @@ function Cards() {
                 initial='hidden'
                 whileInView='visible'
                 viewport={{once:false,amount:0.3}}
-                whileHover={{scale:0.9}}
                 >
                     <div className="card bg-dark text-white">
                         <img src={Img1} className="card-img" alt="..." />
@@ -29,7 +28,6 @@ function Cards() {
                 initial='hidden'
                 whileInView='visible'
                 viewport={{once:false,amount:0.3}}
-                whileHover={{scale:0.9}}
                 >
                     <div className="card text-white">
                         <img src={Img2} className="card-img" alt="..." />
@@ -45,7 +43,6 @@ function Cards() {
                  initial='hidden'
                  whileInView='visible'
                  viewport={{once:false,amount:0.3}}
-                whileHover={{scale:0.9}}
                  >
                     <div className="card bg-dark text-white">
                         <img src={Img3} className="card-img" alt="..." />

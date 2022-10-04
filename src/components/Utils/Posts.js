@@ -2,9 +2,9 @@ import React, { useContext } from 'react'
 import { NavLink } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { posts } from '../Utils/Animations';
-import {DataProvider} from '../RoutesPage';
+import { MainStore } from '../Store/Context';
 function Posts() {
-    const {data}=useContext(DataProvider);
+    const {data}=useContext(MainStore);
     return (
         <div className='container'>
             <div className='row'>
@@ -30,7 +30,7 @@ function Posts() {
                                         <p className='card-text'>{item.date}</p>
                                     </div>
                                     <h5 className='card-title'>{item.title}</h5>
-                                    <p className='card-description card-text'>{item.description}</p>
+                                    <p className='card-description card-text'>{item.description.slice(0,80)}</p>
                                 </div>
                             </motion.div>
                         </div>
